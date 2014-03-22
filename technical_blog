@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang = "en">
+	<head>
+		<title>Technical Blog</title>
+	</head>
+	<style type="text/css">
+	h1 {
+		text-align: center;
+	}
+	body {
+		width: 100%;
+		background-color: #E8E8E8;
+	}
+	img {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	#answer {
+		width: 85%;
+		margin: 0 auto;
+	}
+	p {
+		font-size: 18px
+	}
+	</style>
+	<body>
+		<img src="http://www.b2bweb.fr/wp-content/uploads/js-logo-badge-512.png">
+		<h1>Why is JavaScript so popular in web development?</h1>
+		<div id="answer">
+		<p>The answer is very simple. Because JavaScript enabale you to have an interaction with the user. Not only you can send data to user, but also receieve from him/her. This makes this scripting language very powerful and useful.</p>
+		<p>JavaScript is also a very simple language to write and very easy for different browsers to read.</p>
+		<p>Although it can be used for backend, but its mainly used in front end development and is a powerful interactive language for your website.</p>
+		</div>
+	</body>
+	</html>
