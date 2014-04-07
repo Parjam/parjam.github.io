@@ -1,2 +1,44 @@
 <!DOCTYPE html>
 <html lang = "en">
+	<head>
+		<title>Technical Blog</title>
+	</head>
+	<style type="text/css">
+	h1 {
+		text-align: center;
+	}
+	body {
+		width: 100%;
+	}
+	img {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	#answer {
+		width: 85%;
+		margin: 0 auto;
+	}
+	p {
+		font-size: 18px
+	}
+	</style>
+	<body>
+		<img src="http://s7.postimg.org/66ez2t7fv/political_world_map3000.jpg">
+		<h1>How to use "map" built-in method on an array</h1>
+		<div id="answer">
+		<p>Mapping an array is to iterate over an array and, for every value, pass that value to a block and insert the return from the block into a new array. You're "mapping" the values of an array to a new array via a function (the block you passed to the Array).</p>
+		<p>So on to a practical example. Say you have an array of symbols, as well as a hash. For each symbol in the array, you want to look up that symbol in the hash and add the value from the hash to a new array. Without using the map method, the code would look something like this.</p>
+		<p>names = %w{ Alice Bob }</p>
+		<p>scores = { "Alice" => 100, "Bob", 75 }</p>
+		<p>scoreboard = []</p>
+		<p>names.each do |n|</p>
+		<p> scoreboard << scores[n]</p>
+		<p>end</p>
+		<p>Not very compact. Not very Ruby-like. So let me just show you how it looks when using map.</p>
+		<p>names = %w{ Alice Bob }</p>
+		<p>scores = { "Alice" => 100, "Bob", 75 }</p>
+		<p>scoreboard = names.map{ |n| scores[n] }</p>
+		</div>
+	</body>
+	</html>
