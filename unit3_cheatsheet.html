@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang = "en">
+	<head>
+		<title>Technical Blog</title>
+	</head>
+	<style type="text/css">
+	h2 {
+		text-align: center;
+	}
+	body {
+		width: 100%;
+		font-size: 20px
+	}
+	img {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	#answer {
+		width: 85%;
+		margin: 0 auto;
+		line-height: 180%
+	}
+	em {
+		color: red
+	}
+	</style>
+	<body>
+		<img src="http://s28.postimg.org/eoxx7ghnx/Ruby_Enumerable_Mind_Map.png">
+		<h2>Ruby Enumerables Cheat Sheet</h2>
+		<div id="answer">
+		<ul>
+			<li><em>all? [{ |obj| block }]</em> Passes each element of the collection to the given block. The method returns true if the block never returns false or nil.</li>
+
+			<li><em>any? [{ |obj| block }]</em> Passes each element of the collection to the given block. The method returns true if the block ever returns a value other than false or nil.</li>
+
+			<li><em>chunk { |elt| ... }</em> Enumerates over the items, chunking them together based on the return value of the block. Consecutive elements which return the same block value are chunked together.</li>
+
+			<li><em>count, count(item), count { |obj| block }</em> Returns the number of items in enum through enumeration. If an argument is given, the number of items in enum that are equal to item are counted. If a block is given, it counts the number of elements yielding a true value.</li>
+
+			<li><em>drop(n), drop_while { |arr| block }</em> Drop(n) drops first n elements from enum, and returns rest elements in an array. Drop_while drops elements up to, but not including, the first element for which the block returns nil or false and returns an array containing the remaining elements.</li>
+
+			<li><em>each_cons(n) { ... }</em> Iterates the given block for each array of consecutive <n> elements. If no block is given, returns an enumerator.</li>
+
+			<li><em>each_slice(n) { ... }</em> Iterates the given block for each slice of <n> elements. If no block is given, returns an enumerator.</li>
+
+			<li><em>each_with_index(*args) { |obj, i| block }</em> Calls block with two arguments, the item and its index, for each item in enum. Given arguments are passed through to each().</li>
+
+			<li><em>each_with_object(obj) { |(*args), memo_obj| ... }</em> Iterates the given block for each element with an arbitrary object given, and returns the initially given object.</li>
+
+			<li><em>find(ifnone = nil) { |obj| block }</em> Passes each entry in enum to block. Returns the first for which block is not false. If no object matches, calls ifnone and returns its result when it is specified, or returns nil otherwise.</li>
+
+			<li><em>find_all { |obj| block }</em> Returns an array containing all elements of enum for which the given block returns a true value.</li>
+
+			<li><em>first(n)</em> Returns the first element, or the first n elements, of the enumerable. If the enumerable is empty, the first form returns nil, and the second form returns an empty array.</li>
+
+			<li><em>group_by { |obj| block }</em> Groups the collection by result of the block. Returns a hash where the keys are the evaluated result from the block and the values are arrays of elements in the collection that correspond to the key.</li>
+
+			<li><em>include?(obj)</em> Returns true if any member of enum equals obj. Equality is tested using ==.</li>
+
+			<li><em>inject(initial) { |memo, obj| block }</em> Combines all elements of enum by applying a binary operation, specified by a block or a symbol that names a method or operator.</li>
+
+			<li><em>map { |obj| block }</em> Returns a new array with the results of running block once for every element in enum.</li>
+
+			<li><em>max, max { |a, b| block }</em> Returns the object in enum with the maximum value. The first form assumes all objects implement Comparable; the second uses the block to return a <=> b.</li>
+
+			<li><em>max_by { |obj| block }</em> Returns the object in enum that gives the maximum value from the given block.</li>
+
+			<li><em>min { |a, b| block }</em> Returns the object in enum with the minimum value. The first form assumes all objects implement Comparable; the second uses the block to return a <=> b.</li>
+
+			<li><em>min_by { |obj| block }</em> Returns the object in enum that gives the minimum value from the given block.</li>
+
+			<li><em>minmax, minmax { |a, b| block }</em> Returns two elements array which contains the minimum and the maximum value in the enumerable. The first form assumes all objects implement Comparable; the second uses the block to return a <=> b.</li>
+
+			<li><em>minmax_by { |obj| block }</em> Returns a two element array containing the objects in enum that correspond to the minimum and maximum values respectively from the given block.</li>
+
+			<li><em>none? [{ |obj| block }]</em> Passes each element of the collection to the given block. The method returns true if the block never returns true for all elements. If the block is not given, none? will return true only if none of the collection members is true.</li>
+
+			<li><em>one? [{ |obj| block }]</em> Passes each element of the collection to the given block. The method returns true if the block returns true exactly once. If the block is not given, one? will return true only if exactly one of the collection members is true.</li>
+
+			<li><em>partition { |obj| block }</em> Returns two arrays, the first containing the elements of enum for which the block evaluates to true, the second containing the rest.</li>
+
+			<li><em>reject { |obj| block }</em> Returns an array for all elements of enum for which the given block returns false.</li>
+
+			<li><em>select { |obj| block }</em> Returns an array containing all elements of enum for which the given block returns a true value.</li>
+
+			<li><em>sort { |a, b| block }</em> Returns an array containing the items in enum sorted, either according to their own <=> method, or by using the results of the supplied block. </li>
+
+			<li><em>sort_by { |obj| block }</em> Sorts enum using a set of keys generated by mapping the values in enum through the given block.</li>
+
+			<li><em>take_while { |arr| block }</em> Passes elements to the block until the block returns nil or false, then stops iterating and returns an array of all prior elements.</li>
+		</ul>
+		</div>
+	</body>
+	</html>
